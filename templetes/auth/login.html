@@ -1,0 +1,19 @@
+{% extends "master/base.html" %}
+{% block body %}
+
+
+<h2>Register Now</h2>
+
+<form action="" method="POST">
+    {% csrf_token %}
+  <label for="lname">User Name</label>
+  <input type="text" id="lname" name="username" placeholder="Your last name..">
+
+  <label for="lname">Password</label>
+  <input type="password" id="lname" name="password" placeholder="Your last name..">
+
+  <input type="submit" value="Login">
+</form>
+
+
+{% endblock body %}
