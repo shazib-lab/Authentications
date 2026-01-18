@@ -2,7 +2,7 @@
 {% block body %}
 
 
-<h2>Register Now</h2>
+<h2>Login Now</h2>
 
 <form action="" method="POST">
     {% csrf_token %}
@@ -13,6 +13,7 @@
   <input type="password" id="lname" name="password" placeholder="Your last name..">
 
   <input type="submit" value="Login">
+    <a href="{% url 'register' %}">Register Now</a>
 </form>
 
 

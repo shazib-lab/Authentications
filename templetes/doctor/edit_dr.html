@@ -1,0 +1,12 @@
+{% extends "master/base.html" %}
+{% block body %}
+
+
+<h2>Add Doctor Now</h2>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form_dr}}
+  <input type="submit" value="Submit">
+</form>
+{% endblock body %}

@@ -1,0 +1,33 @@
+{% extends "master/base.html" %}
+{% block body %}
+
+
+<h1>Department List</h1>
+
+<a href="{% url 'doctor_page' %}">Add New Doctor</a>
+<table>
+  <tr>
+    <th>SL</th>
+    <th>Name</th>
+    <th>Specilization</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Department</th>
+    <th>Action</th>
+  </tr>
+  {% for i in dr_data %}
+  <tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.specilization}}</td>
+    <td>{{i.phone}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.department}}</td>
+    <td>
+        <a href="{% url 'edit_page' i.id %}">Edit</a>
+        <a href="{% url 'delete_page' i.id %}" onclick="return confirm('Are you sure?')">Delete</a>
+    </td>
+  </tr>
+    {% endfor %}
+  </table>
+{% endblock body %}
